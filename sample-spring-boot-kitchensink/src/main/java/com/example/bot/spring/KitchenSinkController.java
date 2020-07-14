@@ -560,6 +560,16 @@ public class KitchenSinkController {
                                                     .build())
                                       .build());
                 break;
+            case ".tagall":
+                this.reply(replyToken,
+                        TextMessage.builder()
+                                .text("Yo yo! Y'all")
+                                .sender(Sender.builder()
+                                        .name("Tag All - ")
+                                        .iconUrl(createUri("/static/icon/cat.png"))
+                                        .build())
+                                .build());
+                break;
             default:
                 log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
