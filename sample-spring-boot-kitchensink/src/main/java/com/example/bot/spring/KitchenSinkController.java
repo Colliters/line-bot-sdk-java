@@ -329,12 +329,12 @@ public class KitchenSinkController {
                                         this.replyText(replyToken, throwable.getMessage());
                                         return;
                                     }
-                                    this.replyText(replyToken, "ID: " + userId);
                                     this.reply(
                                             replyToken,
                                             Arrays.asList(new TextMessage("(from group)"),
-                                                          new TextMessage(
+                                                          new TextMessage("ID: " + userId),
                                                                   "Display name: " + profile.getDisplayName()),
+                                                          new TextMessage(
                                                           new ImageMessage(profile.getPictureUrl(),
                                                                            profile.getPictureUrl()))
                                     );
