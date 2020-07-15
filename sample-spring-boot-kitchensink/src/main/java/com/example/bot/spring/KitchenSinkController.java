@@ -220,6 +220,7 @@ public class KitchenSinkController {
     public void handleJoinEvent(JoinEvent event) {
         String replyToken = event.getReplyToken();
         this.replyText(replyToken, "Joined " + event.getSource());
+        this.replytext(replyToken , "Maybe Joining " + event.getTimestamp());
     }
 
     @EventMapping
@@ -567,7 +568,7 @@ public class KitchenSinkController {
                         TextMessage.builder()
                                 .text("Yo yo! Y'all")
                                 .sender(Sender.builder()
-                                        .name("Tag All - ")
+                                        .name("TagAll - ")
                                         .iconUrl(createUri("/static/icon/cat.png"))
                                         .build())
                                 .build());
