@@ -220,7 +220,7 @@ public class KitchenSinkController {
     public void handleJoinEvent(JoinEvent event) {
         String replyToken = event.getReplyToken();
         this.replyText(replyToken, "Joined " + event.getSource());
-        this.replytext(replyToken , "Maybe Joining " + event.getTimestamp());
+        this.replyText(replyToken, "Maybe Joining " + event.getTimestamp());
     }
 
     @EventMapping
