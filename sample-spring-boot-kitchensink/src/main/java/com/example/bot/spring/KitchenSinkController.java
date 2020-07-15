@@ -219,7 +219,7 @@ public class KitchenSinkController {
     @EventMapping
     public void handleJoinEvent(JoinEvent event) {
         String replyToken = event.getReplyToken();
-      //  this.replyText(replyToken, "Joined " + event.getSource());
+        //  this.replyText(replyToken, "Joined " + event.getSource());
         this.replyText(replyToken, "Maybe Joining " + event.getTimestamp());
     }
 
@@ -311,7 +311,7 @@ public class KitchenSinkController {
             throws Exception {
         final String text = content.getText();
 
-         final String text2 = text.toLowerCase();
+        final String text2 = text.toLowerCase();
 
         log.info("Got text message from replyToken:{}: text:{} emojis:{}", replyToken, text,
                  content.getEmojis());
@@ -372,10 +372,10 @@ public class KitchenSinkController {
                                         .text("Bye Y'all")
                                         .sender(Sender.builder()
                                                 .name("Bad ")
-                                                .iconUrl(createUri("/static/icon/DoorSlam.gif"))
+                                                .iconUrl(createUri("/static/icon/DoorSlam.jpg"))
                                                 .build())
                                         .build());
-             //       this.replyText(replyToken, "Leaving group");
+        //       this.replyText(replyToken, "Leaving group");
                     lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
                 } else if (source instanceof RoomSource) {
                     this.replyText(replyToken, "Leaving room");
