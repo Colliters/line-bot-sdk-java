@@ -310,9 +310,11 @@ public class KitchenSinkController {
             throws Exception {
         final String text = content.getText();
 
+         final String text2 = text.toLowerCase();
+
         log.info("Got text message from replyToken:{}: text:{} emojis:{}", replyToken, text,
                  content.getEmojis());
-        switch (text) {
+        switch (text2) {
             case "profile": {
                 log.info("Invoking 'profile' command: source:{}",
                          event.getSource());

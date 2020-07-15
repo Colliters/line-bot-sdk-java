@@ -71,6 +71,8 @@ public class Text implements FlexComponent {
 
     String text;
 
+    String text2;
+
     FlexFontSize size;
 
     FlexAlign align;
