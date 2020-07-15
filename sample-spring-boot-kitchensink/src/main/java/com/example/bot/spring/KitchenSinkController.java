@@ -366,7 +366,16 @@ public class KitchenSinkController {
             case "bye": {
                 Source source = event.getSource();
                 if (source instanceof GroupSource) {
-                    this.replyText(replyToken, "Leaving group");
+
+                        this.reply(replyToken,
+                                TextMessage.builder()
+                                        .text("Bye Y'all")
+                                        .sender(Sender.builder()
+                                                .name("Bad ")
+                                                .iconUrl(createUri("/static/icon/DoorSlam.gif"))
+                                                .build())
+                                        .build());
+             //       this.replyText(replyToken, "Leaving group");
                     lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
                 } else if (source instanceof RoomSource) {
                     this.replyText(replyToken, "Leaving room");
