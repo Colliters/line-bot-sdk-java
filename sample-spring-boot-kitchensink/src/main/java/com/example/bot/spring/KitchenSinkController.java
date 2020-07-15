@@ -335,6 +335,7 @@ public class KitchenSinkController {
                                             Arrays.asList(new TextMessage("(from group)"),
                                                           new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
+                                                          new TextMessage("ID: " + userId),
                                                           new ImageMessage(profile.getPictureUrl(),
                                                                            profile.getPictureUrl()))
                                     );
@@ -376,7 +377,9 @@ public class KitchenSinkController {
                                                 .build())
                                         .build());
                     //       this.replyText(replyToken, "Leaving group");
-                    lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
+                    //lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
+
+
                 } else if (source instanceof RoomSource) {
                     this.replyText(replyToken, "Leaving room");
                     lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
