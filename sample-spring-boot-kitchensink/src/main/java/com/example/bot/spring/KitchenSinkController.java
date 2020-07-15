@@ -377,7 +377,7 @@ public class KitchenSinkController {
                                                 .build())
                                         .build());
                     //       this.replyText(replyToken, "Leaving group");
-                    //lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
+                    //       lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
 
 
                 } else if (source instanceof RoomSource) {
