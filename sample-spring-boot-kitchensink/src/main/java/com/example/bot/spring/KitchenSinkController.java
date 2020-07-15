@@ -329,7 +329,6 @@ public class KitchenSinkController {
                                         this.replyText(replyToken, throwable.getMessage());
                                         return;
                                     }
-                                    this.replyText(replyToken, "ID: " + userId);
                                     this.reply(
                                             replyToken,
                                             Arrays.asList(new TextMessage("(from group)"),
