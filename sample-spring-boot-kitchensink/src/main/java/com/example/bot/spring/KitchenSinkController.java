@@ -375,7 +375,7 @@ public class KitchenSinkController {
                                                 .iconUrl(createUri("/static/icon/DoorSlam.jpg"))
                                                 .build())
                                         .build());
-        //       this.replyText(replyToken, "Leaving group");
+                    //       this.replyText(replyToken, "Leaving group");
                     lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
                 } else if (source instanceof RoomSource) {
                     this.replyText(replyToken, "Leaving room");
