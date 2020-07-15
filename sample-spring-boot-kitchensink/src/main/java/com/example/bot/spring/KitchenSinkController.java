@@ -389,7 +389,7 @@ public class KitchenSinkController {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "Do it?",
                         new MessageAction("Yes", "Yes!"),
-                        new MessageAction("No", "No!")
+                        new MessageAction("No", "No!!")
                 );
                 TemplateMessage templateMessage = new TemplateMessage("Confirm alt text", confirmTemplate);
                 this.reply(replyToken, templateMessage);
