@@ -335,7 +335,7 @@ public class KitchenSinkController {
                                             Arrays.asList(new TextMessage("(from group)"),
                                                           new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
-                                                          new TextMessage("ID: " + userId),
+                                            //              new TextMessage("ID: " + userId),
                                                           new ImageMessage(profile.getPictureUrl(),
                                                                            profile.getPictureUrl()))
                                     );
