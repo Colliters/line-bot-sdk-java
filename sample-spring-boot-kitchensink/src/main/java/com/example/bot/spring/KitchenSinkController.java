@@ -575,7 +575,7 @@ public class KitchenSinkController {
             case ".tagall":
                 this.reply(replyToken,
                         TextMessage.builder()
-                                .text("Yo yo! Y'all")
+                                .text("Yo yo!")
                                 .sender(Sender.builder()
                                         .name("TagAll - ")
                                         .iconUrl(createUri("/static/icon/cat.png"))
@@ -596,7 +596,7 @@ public class KitchenSinkController {
                 log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
-                        text
+                        "You said " + text
                 );
                 break;
         }
