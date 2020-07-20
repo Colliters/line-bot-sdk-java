@@ -334,7 +334,6 @@ public class KitchenSinkController {
                                             Arrays.asList(new TextMessage("(from group)"),
                                                           new TextMessage(
                                                                   "Display name: " + profile.getDisplayName()),
-                                                          new TextMessage("ID: " + userId),
                                                           new ImageMessage(profile.getPictureUrl(),
                                                                            profile.getPictureUrl()))
                                     );
@@ -579,6 +578,16 @@ public class KitchenSinkController {
                                 .text("Yo yo! Y'all")
                                 .sender(Sender.builder()
                                         .name("TagAll - ")
+                                        .iconUrl(createUri("/static/icon/cat.png"))
+                                        .build())
+                                .build());
+                break;
+            case ".tagbankers":
+                this.reply(replyToken,
+                        TextMessage.builder()
+                                .text("@Zakrzowek")
+                                .sender(Sender.builder()
+                                        .name("TagBankers - ")
                                         .iconUrl(createUri("/static/icon/cat.png"))
                                         .build())
                                 .build());
